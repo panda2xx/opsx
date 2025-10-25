@@ -49,7 +49,7 @@ func NewOpsXCenterCommand() *cobra.Command {
 		Args: cobra.NoArgs,
 	}
 
-	// 初始化配置函数，在每个命令运行时调用
+	// 初始化配置函数，RunE方法运行之前调用
 	cobra.OnInitialize(onInitialize)
 
 	// cobra 支持持久性标志(PersistentFlag)，该标志可用于它所分配的命令以及该命令下的每个子命令
